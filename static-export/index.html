@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpeg" href="./assets/logo-dark-square.jpg" />
+    <link rel="apple-touch-icon" href="./assets/logo-dark-square.jpg" />
+    <meta name="theme-color" content="#124E52" />
+    <title>STUDIO ADAM | From Idea to Impact</title>
+    <meta
+      name="description"
+      content="ستوديو آدم — علامة إبداعية تحوّل الأفكار إلى تجارب بصرية ذات معنى وأثر. لوجوهات، هويات بصرية، مواقع، وبوستات إعلانية."
+    />
+    <meta property="og:title" content="STUDIO ADAM — From Idea to Impact | ستوديو آدم" />
+    <meta property="og:image" content="./assets/logo-dark.jpg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Dotted Canvas & Ambient Cursor Spotlight -->
+    <div class="dots" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Top Navigation Bar -->
+    <header class="site-header">
+      <div class="container nav-row">
+        <a href="#home" class="brand-lockup" data-nav-page="home">
+          <span class="brand-wordmark">STUDIO ADAM</span>
+          <span class="brand-sub" data-i18n="brandSub">استوديو آدم · الهوية والتصميم</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main Navigation">
+          <a href="#portfolio-page" class="nav-link" data-nav-page="portfolio" data-i18n="navPortfolio">معرض الأعمال</a>
+          <a href="#pricing" class="nav-link" data-nav-page="home" data-nav-hash="#pricing" data-i18n="navLaunch">عرض الافتتاح</a>
+          <a href="#packages" class="nav-link" data-nav-page="home" data-nav-hash="#packages" data-i18n="navPackages">الباقات</a>
+          <a href="#calculator" class="nav-link" data-nav-page="home" data-nav-hash="#calculator" data-i18n="navCalculator">الحاسبة</a>
+          <a href="#services" class="nav-link" data-nav-page="home" data-nav-hash="#services" data-i18n="navServices">خدماتنا</a>
+          <a href="#reviews" class="nav-link" data-nav-page="home" data-nav-hash="#reviews" data-i18n="navReviews">آراء العملاء</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="tel:0785131386" class="btn-pill-outline desktop-only-xl" title="Direct Call">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span dir="ltr" class="font-mono tabular-nums">078 513 1386</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/studioadam.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-pill-outline desktop-only-sm"
+            title="Instagram"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            <span dir="ltr">@studioadam.co</span>
+          </a>
+
+          <button type="button" id="lang-toggle-btn" class="btn-pill-outline btn-lang" aria-label="Switch language">
+            <span id="lang-toggle-label">EN</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </button>
+
+          <button type="button" class="btn-primary-nav" data-open-inquiry="launch" data-i18n="bookNow">احجز الآن</button>
+
+          <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer -->
+      <div id="mobile-drawer" class="mobile-drawer hidden">
+        <div class="mobile-drawer-grid">
+          <a href="#portfolio-page" class="mobile-drawer-link" data-nav-page="portfolio" data-i18n="navPortfolio">معرض الأعمال</a>
+          <a href="#pricing" class="mobile-drawer-link" data-nav-page="home" data-nav-hash="#pricing" data-i18n="navLaunch">عرض الافتتاح</a>
+          <a href="#packages" class="mobile-drawer-link" data-nav-page="home" data-nav-hash="#packages" data-i18n="navPackages">الباقات</a>
+          <a href="#calculator" class="mobile-drawer-link" data-nav-page="home" data-nav-hash="#calculator" data-i18n="navCalculator">الحاسبة</a>
+          <a href="#services" class="mobile-drawer-link" data-nav-page="home" data-nav-hash="#services" data-i18n="navServices">خدماتنا</a>
+          <a href="#reviews" class="mobile-drawer-link" data-nav-page="home" data-nav-hash="#reviews" data-i18n="navReviews">آراء العملاء</a>
+        </div>
+        <div class="mobile-drawer-foot">
+          <a href="tel:0785131386"><span dir="ltr">078 513 1386</span></a>
+          <a href="https://www.instagram.com/studioadam.co" target="_blank" rel="noopener noreferrer"><span dir="ltr">@studioadam.co</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==================================================================
+           HOME LANDING VIEW
+           ================================================================== -->
+      <div id="home-view">
+        <!-- Hero Band -->
+        <section class="hero-wrap">
+          <div class="container hero-frame">
+            <div class="floating-chip chip-top animate-floaty-1">
+              <div class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div>
+                <span class="chip-title" data-i18n="chipFastTitle">تسليم سريع</span>
+                <span class="chip-sub" data-i18n="chipFastSub">خلال 2 إلى 4 أيام عمل</span>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-bottom animate-floaty-2">
+              <div class="chip-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"/></svg>
+              </div>
+              <div>
+                <span class="chip-title" data-i18n="chipCalcTitle">حساب فوري</span>
+                <span class="chip-sub" data-i18n="chipCalcSub">بالدينار الأردني</span>
+              </div>
+            </div>
+
+            <div class="hero-band dots-dark">
+              <div class="hero-spotlight" aria-hidden="true"></div>
+              <div class="hero-inner">
+                <span class="hero-badge">
+                  <span class="live-dot animate-blink"></span>
+                  <span data-i18n="heroBadge">حساب فوري بالدينار الأردني</span>
+                </span>
+
+                <h1 class="hero-title" id="hero-title">
+                  هويتك البصرية تبدأ <span class="accent-mint">من هنا</span>
+                </h1>
+
+                <p class="hero-subtitle" data-i18n="heroSubtitle">
+                  شعارات، هوية بصرية، بوستات وريلز، ومواقع إلكترونية — تصميم يحوّل فكرتك إلى علامة يشاركها الناس.
+                </p>
+
+                <div class="cta-group">
+                  <a href="#pricing" class="btn-white" data-nav-page="home" data-nav-hash="#pricing" data-i18n="heroCtaExplore">
+                    اكتشف الباقات
+                  </a>
+                  <a href="#calculator" class="btn-ghost-white" data-nav-page="home" data-nav-hash="#calculator" data-i18n="heroCtaCalc">
+                    احسب باقتك
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Launch Offer Card -->
+        <section id="pricing" class="launch-section reveal">
+          <div class="container container-compact">
+            <div class="launch-card dots-dark card-hover-dark">
+              <span class="pill-glass" data-i18n="launchBadge">عرض الافتتاح</span>
+              <h3 data-i18n="launchTitle">باقة انطلاقة</h3>
+              <p class="launch-sub" data-i18n="launchSub">
+                كل اللي يحتاجه محلك عشان يبدأ على السوشيال ميديا بقوة
+              </p>
+
+              <ul class="check-list">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="launchFeat1">لوجو احترافي مع هوية لونية متكاملة</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="launchFeat2">10 بوستات إعلانية جاهزة للنشر</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span data-i18n="launchFeat3">صنع موقع إلكتروني احترافي (مشمول مجاناً في العرض)</span>
+                </li>
+              </ul>
+
+              <div class="price-row">
+                <span class="price-big tabular-nums" data-i18n="launchPrice">25 دينار</span>
+                <span class="price-unit" data-i18n="onlyLabel">فقط</span>
+              </div>
+              <p class="price-note" data-i18n="launchNote">سعر خاص لأول 5 عملاء — الكمية محدودة</p>
+
+              <button type="button" class="btn-white" style="width: 100%;" data-open-inquiry="launch" data-i18n="launchBtn">
+                راسلنا دايركت واحجز مكانك
+              </button>
+
+              <div class="launch-foot font-mono">
+                Studio Adam · <span dir="ltr">078 513 1386</span> · @studioadam.co
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Compact Portfolio Preview (2 Featured Videos + View All Button) -->
+        <section id="portfolio" class="section reveal">
+          <div class="container">
+            <div class="preview-box">
+              <div class="preview-split">
+                <div>
+                  <div class="section-kicker-text" data-i18n="previewKicker">معرض الأعمال · إعلانات وتصاميم حقيقية</div>
+                  <h2 class="section-title" data-i18n="previewTitle">شاهد جودة أعمالنا على أرض الواقع</h2>
+                  <p class="section-desc" style="margin-bottom: 1.5rem;" data-i18n="previewDesc">
+                    هذه لمحة سريعة من أحدث إعلانات الـ UGC. انتقل إلى صفحة معرض الأعمال المستقلة لمشاهدة الفيديوهات السبعة الكاملة وتصاميم السوشيال ميديا.
+                  </p>
+
+                  <div class="preview-meta">
+                    <span class="preview-meta-item tabular-nums">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18M17 3v18M3 7.5h4M3 12h18M3 16.5h4M17 7.5h4M17 16.5h4"/></svg>
+                      <span data-i18n="metaReelsCount">7 فيديوهات UGC</span>
+                    </span>
+                    <span aria-hidden="true">·</span>
+                    <span class="preview-meta-item tabular-nums">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                      <span data-i18n="metaDesignsCount">8 تصاميم سوشيال</span>
+                    </span>
+                  </div>
+
+                  <button type="button" class="btn-teal" data-nav-page="portfolio" data-i18n="viewPortfolioBtn">
+                    عرض الأعمال (15 عمل)
+                  </button>
+                </div>
+
+                <div class="preview-videos-grid" id="preview-videos-container"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Brand Identity Section -->
+        <section id="brand-identity" class="section identity-band reveal">
+          <div class="container">
+            <div style="max-width: 720px; margin-bottom: 3rem;">
+              <div class="section-kicker-text" data-i18n="identityKicker">الهوية البصرية واللونية</div>
+              <h2 class="section-title" data-i18n="identityTitle">
+                الألوان والهوية: فلسفة التصميم المعماري النقي
+              </h2>
+              <p class="section-desc" data-i18n="identityDesc">
+                تعتمد هوية ستوديو آدم على لونين رئيسيين متكاملين: البيترول تيل الداكن (#124E52) مع الأوف وايت العاجي (#F5F0E6)، لإنشاء حضور فخم ومميز يدوم في ذاكرة الجمهور.
+              </p>
+            </div>
+
+            <div class="grid-2" style="margin-bottom: 2.5rem;">
+              <div class="swatch-card is-dark card-hover-dark">
+                <div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                    <span style="font-size:0.75rem;font-weight:800;opacity:0.8;" data-i18n="swatchPrimaryRole">اللون الأساسي للهوية</span>
+                    <span class="font-mono" dir="ltr" style="font-size:0.85rem;font-weight:800;background:rgba(0,0,0,0.18);padding:0.2rem 0.65rem;border-radius:9999px;">#124E52</span>
+                  </div>
+                  <h3 style="margin:0 0 0.6rem;font-size:1.5rem;font-weight:900;">Deep Petrol Teal</h3>
+                  <p style="margin:0 0 1.25rem;font-size:0.85rem;opacity:0.9;" data-i18n="swatchPrimaryDesc">
+                    يرمز إلى الاحترافية والعمق والثقة، ويمنح العلامة التجارية طابعاً معمارياً مهيباً بعيداً عن الألوان التقليدية المكررة.
+                  </p>
+                </div>
+                <div style="padding-top:0.85rem;border-top:1px solid rgba(255,255,255,0.16);display:flex;justify-content:space-between;font-size:0.75rem;font-weight:800;opacity:0.8;">
+                  <span data-i18n="swatchAppCore">الاستخدام: ركيزة أساسية</span>
+                  <span>STUDIO ADAM</span>
+                </div>
+              </div>
+
+              <div class="swatch-card is-light card-hover">
+                <div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                    <span style="font-size:0.75rem;font-weight:800;opacity:0.8;" data-i18n="swatchBgRole">اللون الأساسي للخلفيات</span>
+                    <span class="font-mono" dir="ltr" style="font-size:0.85rem;font-weight:800;background:rgba(18,78,82,0.08);padding:0.2rem 0.65rem;border-radius:9999px;">#F5F0E6</span>
+                  </div>
+                  <h3 style="margin:0 0 0.6rem;font-size:1.5rem;font-weight:900;">Warm Ivory</h3>
+                  <p style="margin:0 0 1.25rem;font-size:0.85rem;opacity:0.9;" data-i18n="swatchBgDesc">
+                    اللون الأساسي للخلفيات والمساحات الفسيحة. يضيف الهدوء والأناقة، ويبرز الخطوط والتكوينات الهندسية والنصوص بوضوح مريح للعين.
+                  </p>
+                </div>
+                <div style="padding-top:0.85rem;border-top:1px solid rgba(18,78,82,0.16);display:flex;justify-content:space-between;font-size:0.75rem;font-weight:800;opacity:0.8;">
+                  <span data-i18n="swatchAppCore">الاستخدام: ركيزة أساسية</span>
+                  <span>STUDIO ADAM</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align:center;margin:2.5rem 0 1.5rem;">
+              <h3 style="margin:0 0 0.5rem;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;color:var(--teal-ink);" data-i18n="studioSlogan">
+                أنا اللي بصنع من الفكرة أثرًا.
+              </h3>
+              <p style="margin:0;font-size:0.85rem;font-weight:700;color:var(--ink-soft);" data-i18n="deliverablesSub">
+                مخرجات متكاملة تُسلَّم لك بجودة استثنائية وجاهزة للنشر الفوري
+              </p>
+            </div>
+
+            <div class="deliverables-list" id="deliverables-container"></div>
+            <div class="grid-4" id="pillars-container"></div>
+          </div>
+        </section>
+
+        <!-- Core Services Section -->
+        <section id="services" class="section reveal">
+          <div class="container">
+            <div class="section-header-center">
+              <span class="section-kicker-pill" data-i18n="servicesKicker">خدماتنا</span>
+              <h2 class="section-title" data-i18n="servicesTitle">الهوية، والمحتوى، والموقع — تحت سقف واحد</h2>
+              <p class="section-desc" data-i18n="servicesDesc">كل ما يحتاجه محلك ليظهر احترافياً على الإنترنت.</p>
+            </div>
+
+            <div class="grid-2" id="services-container"></div>
+          </div>
+        </section>
+
+        <!-- Interactive Custom Package Calculator -->
+        <section id="calculator" class="section reveal">
+          <div class="container container-narrow">
+            <div class="section-header-center">
+              <span class="section-kicker-pill" data-i18n="calcKicker">حاسبة فورية بالدينار الأردني</span>
+              <h2 class="section-title" data-i18n="calcTitle">ابنِ باقتك المخصصة بنفسك</h2>
+              <p class="section-desc" data-i18n="calcDesc">اختر ما تحتاجه وشاهد السعر يتكوّن أمامك لحظة بلحظة.</p>
+            </div>
+
+            <div class="calc-shell">
+              <!-- Step 1: Logo -->
+              <div class="calc-step">
+                <div class="calc-step-head">
+                  <div style="display:flex;align-items:center;gap:0.75rem;">
+                    <span class="step-num">1</span>
+                    <div>
+                      <h3 style="margin:0;font-size:1.05rem;font-weight:900;color:var(--teal-ink);" data-i18n="calcStep1Title">الشعار والهوية البصرية</h3>
+                      <p style="margin:0.15rem 0 0;font-size:0.8rem;font-weight:700;color:var(--ink-soft);" data-i18n="calcStep1Sub">أساس علامتك — اختر مستوى الهوية الذي تحتاجه</p>
+                    </div>
+                  </div>
+                  <div style="text-align:end;">
+                    <strong class="tabular-nums" id="calc-logo-display" style="font-size:1.2rem;font-weight:900;color:var(--teal);display:block;">+0 د.أ</strong>
+                    <span style="font-size:0.72rem;font-weight:700;color:var(--ink-soft);" data-i18n="calcFixed">ثابت</span>
+                  </div>
+                </div>
+
+                <div class="logo-options-grid" id="calc-logo-options">
+                  <button type="button" class="logo-opt-btn is-selected" data-logo-opt="none">
+                    <div style="font-weight:900;font-size:0.88rem;" data-i18n="logoOptNone">لدي شعار جاهز</div>
+                    <div style="font-size:0.75rem;font-weight:700;color:var(--ink-soft);margin-top:2px;" data-i18n="logoOptNoneSub">بدون تصميم شعار</div>
+                    <div class="tabular-nums" style="font-weight:900;font-size:0.88rem;color:var(--teal);margin-top:0.5rem;">0 <span data-i18n="jodShort">د.أ</span></div>
+                  </button>
+                  <button type="button" class="logo-opt-btn" data-logo-opt="logo">
+                    <div style="font-weight:900;font-size:0.88rem;" data-i18n="logoOptPro">لوجو احترافي + ألوان</div>
+                    <div style="font-size:0.75rem;font-weight:700;color:var(--ink-soft);margin-top:2px;" data-i18n="logoOptProSub">شعار أصلي معتمد</div>
+                    <div class="tabular-nums" style="font-weight:900;font-size:0.88rem;color:var(--teal);margin-top:0.5rem;">+10 <span data-i18n="jodShort">د.أ</span></div>
+                  </button>
+                  <button type="button" class="logo-opt-btn" data-logo-opt="full">
+                    <div style="font-weight:900;font-size:0.88rem;" data-i18n="logoOptFull">هوية بصرية شاملة</div>
+                    <div style="font-size:0.75rem;font-weight:700;color:var(--ink-soft);margin-top:2px;" data-i18n="logoOptFullSub">دليل خطوط ومقاسات</div>
+                    <div class="tabular-nums" style="font-weight:900;font-size:0.88rem;color:var(--teal);margin-top:0.5rem;">+20 <span data-i18n="jodShort">د.أ</span></div>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2: Posts -->
+              <div class="calc-step">
+                <div class="calc-step-head">
+                  <div style="display:flex;align-items:center;gap:0.75rem;">
+                    <span class="step-num">2</span>
+                    <div>
+                      <h3 style="margin:0;font-size:1.05rem;font-weight:900;color:var(--teal-ink);" data-i18n="calcStep2Title">عدد البوستات الإعلانية</h3>
+                      <p style="margin:0.15rem 0 0;font-size:0.8rem;font-weight:700;color:var(--ink-soft);" data-i18n="calcStep2Sub">تصاميم توقف التمرير وتوصل رسالتك على إنستغرام (1 د.أ / بوست)</p>
+                    </div>
+                  </div>
+                  <div style="text-align:end;flex-shrink:0;">
+                    <strong class="tabular-nums" id="calc-posts-display" style="font-size:1.2rem;font-weight:900;color:var(--teal);display:block;">10 بوست</strong>
+                    <span class="tabular-nums" id="calc-posts-cost" style="font-size:0.72rem;font-weight:700;color:var(--ink-soft);">(10 د.أ)</span>
+                  </div>
+                </div>
+
+                <div class="slider-row">
+                  <button type="button" class="stepper-btn" id="posts-dec" aria-label="Decrease posts">−</button>
+                  <input type="range" id="posts-range" min="0" max="25" step="1" value="10" />
+                  <button type="button" class="stepper-btn" id="posts-inc" aria-label="Increase posts">+</button>
+                </div>
+
+                <div class="presets-row">
+                  <span style="color:var(--ink-soft);" data-i18n="presetsLabel">خيارات سريعة:</span>
+                  <button type="button" class="preset-btn" data-posts-preset="5">5</button>
+                  <button type="button" class="preset-btn is-active" data-posts-preset="10">10</button>
+                  <button type="button" class="preset-btn" data-posts-preset="15">15</button>
+                  <button type="button" class="preset-btn" data-posts-preset="20">20</button>
+                </div>
+              </div>
+
+              <!-- Step 3: Reels -->
+              <div class="calc-step">
+                <div class="calc-step-head">
+                  <div style="display:flex;align-items:center;gap:0.75rem;">
+                    <span class="step-num">3</span>
+                    <div>
+                      <h3 style="margin:0;font-size:1.05rem;font-weight:900;color:var(--teal-ink);" data-i18n="calcStep3Title">عدد فيديوهات الريلز والموشن</h3>
+                      <p style="margin:0.15rem 0 0;font-size:0.8rem;font-weight:700;color:var(--ink-soft);" data-i18n="calcStep3Sub">فيديوهات قصيرة جذابة ومونتاج عصري (3 د.أ / فيديو)</p>
+                    </div>
+                  </div>
+                  <div style="text-align:end;flex-shrink:0;">
+                    <strong class="tabular-nums" id="calc-videos-display" style="font-size:1.2rem;font-weight:900;color:var(--teal);display:block;">2 ريلز</strong>
+                    <span class="tabular-nums" id="calc-videos-cost" style="font-size:0.72rem;font-weight:700;color:var(--ink-soft);">(6 د.أ)</span>
+                  </div>
+                </div>
+
+                <div class="slider-row">
+                  <button type="button" class="stepper-btn" id="videos-dec" aria-label="Decrease reels">−</button>
+                  <input type="range" id="videos-range" min="0" max="8" step="1" value="2" />
+                  <button type="button" class="stepper-btn" id="videos-inc" aria-label="Increase reels">+</button>
+                </div>
+
+                <div class="presets-row">
+                  <span style="color:var(--ink-soft);" data-i18n="presetsLabel">خيارات سريعة:</span>
+                  <button type="button" class="preset-btn" data-videos-preset="0">0</button>
+                  <button type="button" class="preset-btn is-active" data-videos-preset="2">2</button>
+                  <button type="button" class="preset-btn" data-videos-preset="4">4</button>
+                  <button type="button" class="preset-btn" data-videos-preset="6">6</button>
+                </div>
+              </div>
+
+              <!-- Step 4: Website -->
+              <div class="calc-step" style="margin-bottom:1.5rem;">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+                  <div style="display:flex;align-items:flex-start;gap:0.75rem;">
+                    <span class="step-num">4</span>
+                    <div>
+                      <h3 style="margin:0;font-size:1.05rem;font-weight:900;color:var(--teal-ink);" data-i18n="calcStep4Title">صنع موقع إلكتروني احترافي</h3>
+                      <p style="margin:0.2rem 0 0;font-size:0.8rem;font-weight:700;color:var(--ink-soft);max-width:480px;" data-i18n="calcStep4Sub">
+                        موقع تعريفي سريع متوافق مع كافة الهواتف مع ربط فوري بأزرار المحادثة في واتساب وإنستغرام (قيمته 25 د.أ فقط)
+                      </p>
+                      <span id="calc-website-badge" style="display:inline-block;margin-top:0.45rem;font-size:0.75rem;font-weight:900;color:var(--teal);">
+                        مشمول (25 د.أ)
+                      </span>
+                    </div>
+                  </div>
+
+                  <button type="button" id="website-toggle-btn" class="switch-btn is-on" aria-label="Toggle website">
+                    <span class="switch-thumb"></span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Live Summary Card -->
+              <div class="calc-summary dots-dark">
+                <span class="floating-deal-tag" style="inset-inline-start:auto;inset-inline-end:1.5rem;" data-i18n="calcBadge">
+                  حساب فوري بالدينار الأردني
+                </span>
+
+                <div style="position:relative;z-index:1;">
+                  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1rem;">
+                    <h3 style="margin:0;font-size:1.2rem;font-weight:900;" data-i18n="calcSummaryTitle">ملخص باقتك المخصصة</h3>
+                    <span class="font-mono" style="font-size:0.75rem;font-weight:700;opacity:0.8;">STUDIO ADAM</span>
+                  </div>
+
+                  <div style="border-top:1px solid rgba(255,255,255,0.2);padding-top:0.5rem;">
+                    <div class="summary-row">
+                      <span id="sum-logo-label">لدي شعار جاهز</span>
+                      <span class="tabular-nums" id="sum-logo-cost">0 د.أ</span>
+                    </div>
+                    <div class="summary-row">
+                      <span id="sum-posts-label">10 بوستات إعلانية</span>
+                      <span class="tabular-nums" id="sum-posts-cost">10 د.أ</span>
+                    </div>
+                    <div class="summary-row">
+                      <span id="sum-videos-label">2 فيديوهات ريلز وموشن</span>
+                      <span class="tabular-nums" id="sum-videos-cost">6 د.أ</span>
+                    </div>
+                    <div class="summary-row">
+                      <span data-i18n="sumWebsiteLabel">صنع موقع إلكتروني احترافي</span>
+                      <span class="tabular-nums" id="sum-website-cost">25 د.أ</span>
+                    </div>
+                    <div class="summary-row hidden" id="sum-discount-row" style="color:var(--mint);font-weight:900;">
+                      <span data-i18n="sumDiscountLabel">خصم باقة الافتتاح الخاصة</span>
+                      <span class="tabular-nums" id="sum-discount-cost">-20 د.أ</span>
+                    </div>
+                  </div>
+
+                  <div class="summary-total-row">
+                    <span style="font-size:1.05rem;" data-i18n="calcTotalLabel">الإجمالي التقريبي</span>
+                    <span class="tabular-nums" id="sum-total-display" style="font-size:2.1rem;">41 د.أ</span>
+                  </div>
+
+                  <button type="button" id="calc-submit-btn" class="btn-white" style="width:100%;margin-top:1rem;" data-i18n="calcSubmitBtn">
+                    احجز باقتك عبر واتساب
+                  </button>
+                </div>
+              </div>
+
+              <p style="text-align:center;font-size:0.75rem;font-weight:700;color:var(--ink-soft);margin:1rem 0 0;" data-i18n="calcFootnote">
+                الإجمالي تقديري — يعتمد السعر النهائي على تفاصيل مشروعك عند التواصل.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Packages Tier Grid -->
+        <section id="packages" class="section reveal">
+          <div class="container">
+            <div class="section-header-center">
+              <span class="section-kicker-pill" data-i18n="packagesKicker">الباقات</span>
+              <h2 class="section-title" data-i18n="packagesTitle">اختر الباقة اللي تناسب مرحلتك</h2>
+              <p class="section-desc" data-i18n="packagesDesc">أسعار واضحة بالدينار الأردني، بلا مصاريف مفاجئة.</p>
+            </div>
+
+            <div class="grid-3" id="packages-container"></div>
+          </div>
+        </section>
+
+        <!-- Client Testimonials -->
+        <section id="reviews" class="section reveal">
+          <div class="container">
+            <div class="section-header-center">
+              <span class="section-kicker-pill" data-i18n="reviewsKicker">قسم النجاح وثقة العملاء</span>
+              <h2 class="section-title" data-i18n="reviewsTitle">مشاعر حقيقية صُنعت من الصفر</h2>
+            </div>
+
+            <div class="grid-3" id="reviews-container"></div>
+          </div>
+        </section>
+
+        <!-- Direct CTA Banner -->
+        <section id="contact" class="section reveal" style="padding-top:1.5rem;">
+          <div class="container container-narrow">
+            <div class="hero-band dots-dark card-hover-dark" style="padding:3.5rem 1.75rem;">
+              <div class="hero-inner">
+                <h2 class="section-title" style="color:#fff;margin-bottom:0.75rem;" data-i18n="ctaBannerTitle">
+                  جاهز تبني هويتك؟
+                </h2>
+                <p class="hero-subtitle" style="margin-bottom:1.75rem;" data-i18n="ctaBannerDesc">
+                  راسلنا الآن على واتساب أو تابعنا على إنستغرام — نرد عليك ونبدأ بفكرتك فوراً.
+                </p>
+                <div class="cta-group">
+                  <a
+                    href="https://wa.me/962785131386"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-white"
+                    data-i18n="ctaWaBtn"
+                  >
+                    تواصل معنا على واتساب
+                  </a>
+                  <a
+                    href="https://www.instagram.com/studioadam.co"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-ghost-white"
+                  >
+                    <span dir="ltr">@studioadam.co</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ==================================================================
+           DEDICATED PORTFOLIO PAGE VIEW (7 UGC Videos + 8 Social Designs)
+           ================================================================== -->
+      <section id="portfolio-view" class="portfolio-page hidden">
+        <div class="container">
+          <div class="portfolio-topbar">
+            <button type="button" class="btn-pill-outline" data-nav-page="home" data-i18n="backHomeBtn">
+              العودة إلى الرئيسية
+            </button>
+            <span style="font-size:0.78rem;font-weight:700;color:var(--ink-soft);" data-i18n="portfolioTopMeta">
+              @studioadam.co · 15 عملاً
+            </span>
+          </div>
+
+          <div class="portfolio-header">
+            <div style="max-width:640px;">
+              <div class="section-kicker-text" data-i18n="portfolioPageKicker">معرض الأعمال الكامل</div>
+              <h1 class="section-title" style="font-size:clamp(1.9rem,4vw,3rem);" data-i18n="portfolioPageTitle">
+                إعلانات UGC وتصاميم سوشيال ميديا
+              </h1>
+              <p class="section-desc" data-i18n="portfolioPageDesc">
+                أعمال إعلانية وبصرية حقيقية مصممة لرفع المبيعات وجذب الانتباه من الثانية الأولى — اضغط على أي عمل للمشاهدة بالحجم الكامل.
+              </p>
+            </div>
+
+            <div class="segmented-tabs" role="tablist" aria-label="Portfolio Filter">
+              <button type="button" class="tab-btn is-active" data-filter-tab="all" data-i18n="tabAll">الكل (15)</button>
+              <button type="button" class="tab-btn" data-filter-tab="videos" data-i18n="tabVideos">فيديوهات UGC (7)</button>
+              <button type="button" class="tab-btn" data-filter-tab="designs" data-i18n="tabDesigns">تصاميم السوشيال (8)</button>
+            </div>
+          </div>
+
+          <!-- Videos Subsection -->
+          <div id="portfolio-videos-block" style="margin-bottom:3.75rem;">
+            <div class="subgrid-head">
+              <h3 class="subgrid-title" data-i18n="subVideosTitle">فيديوهات الإعلانات والريلز (UGC)</h3>
+              <span class="subgrid-count tabular-nums" data-i18n="subVideosCount">7 أعمال · مرّر للمعاينة</span>
+            </div>
+            <div class="portfolio-grid" id="portfolio-videos-grid"></div>
+          </div>
+
+          <!-- Designs Subsection -->
+          <div id="portfolio-designs-block">
+            <div class="subgrid-head">
+              <h3 class="subgrid-title" data-i18n="subDesignsTitle">تصاميم السوشيال ميديا والهوية البصرية</h3>
+              <span class="subgrid-count tabular-nums" data-i18n="subDesignsCount">8 تصاميم · اضغط للتكبير</span>
+            </div>
+            <div class="portfolio-grid" id="portfolio-designs-grid"></div>
+          </div>
+
+          <!-- Bottom Commission Banner -->
+          <div class="commission-banner dots-dark">
+            <div style="position:relative;z-index:1;max-width:560px;">
+              <h3 style="margin:0 0 0.5rem;font-size:1.6rem;font-weight:900;" data-i18n="portfolioBottomTitle">
+                عجبك الأسلوب؟ لنصنع حملتك القادمة
+              </h3>
+              <p style="margin:0;font-size:0.88rem;color:rgba(255,255,255,0.82);font-weight:600;" data-i18n="portfolioBottomDesc">
+                احجز بوستات سوشيال ميديا بـ 1 د.أ للتصميم أو ريلز UGC بـ 3 د.أ للفيديو، أو احسب باقتك المخصصة فوراً.
+              </p>
+            </div>
+            <div class="cta-group" style="position:relative;z-index:1;">
+              <button type="button" class="btn-white" id="portfolio-book-btn" data-i18n="portfolioBookBtn">
+                اطلب عملاً الآن
+              </button>
+              <button type="button" class="btn-ghost-white" data-nav-page="home" data-nav-hash="#calculator" data-i18n="portfolioCalcBtn">
+                احسب باقتك
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer dots-dark">
+      <div class="container" style="position:relative;z-index:1;">
+        <div class="footer-top">
+          <a href="#home" data-nav-page="home">
+            <span style="font-size:1.5rem;font-weight:900;letter-spacing:0.04em;display:block;">STUDIO ADAM</span>
+            <span style="font-size:0.75rem;opacity:0.8;font-weight:700;" data-i18n="footerSlogan">أنا اللي بصنع من الفكرة أثرًا.</span>
+          </a>
+
+          <nav class="footer-nav">
+            <a href="#portfolio-page" data-nav-page="portfolio" data-i18n="navPortfolio">معرض الأعمال</a>
+            <a href="#brand-identity" data-nav-page="home" data-nav-hash="#brand-identity" data-i18n="footerIdentity">الهوية البصرية</a>
+            <a href="#services" data-nav-page="home" data-nav-hash="#services" data-i18n="navServices">خدماتنا</a>
+            <a href="#packages" data-nav-page="home" data-nav-hash="#packages" data-i18n="navLaunch">عرض الافتتاح</a>
+            <a href="#reviews" data-nav-page="home" data-nav-hash="#reviews" data-i18n="footerStories">قصص النجاح</a>
+          </nav>
+
+          <div style="display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;justify-content:center;">
+            <a href="tel:0785131386" class="footer-btn"><span dir="ltr" class="font-mono tabular-nums">078 513 1386</span></a>
+            <a href="https://www.instagram.com/studioadam.co" target="_blank" rel="noopener noreferrer" class="footer-btn"><span dir="ltr">@studioadam.co</span></a>
+            <button type="button" id="scroll-top-btn" class="footer-btn" aria-label="Back to top">↑</button>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p style="margin:0;" data-i18n="footerCopyright">
+            © 2026 ستوديو آدم. جميع الحقوق محفوظة — علامة إبداعية تحوّل الأفكار إلى أثر.
+          </p>
+          <div class="font-mono" style="display:flex;gap:0.75rem;">
+            <span data-i18n="footerLocation">عمّان، الأردن</span>
+            <span>·</span>
+            <span dir="ltr" class="tabular-nums">078 513 1386</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Contact Button -->
+    <a
+      href="https://wa.me/962785131386"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="floating-wa"
+      data-i18n-aria="floatingWaAria"
+    >
+      <span class="wa-dot-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      </span>
+      <span data-i18n="floatingWaLabel">تواصل معنا</span>
+    </a>
+
+    <!-- Fullscreen Cinema Lightbox Modal -->
+    <div id="lightbox-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+      <div class="lightbox-card" id="lightbox-card">
+        <button type="button" class="modal-close-btn" id="lightbox-close" aria-label="Close">✕</button>
+
+        <div class="lightbox-stage">
+          <div id="lightbox-media-slot"></div>
+          <button type="button" class="lightbox-arrow is-start" id="lightbox-prev" aria-label="Previous">‹</button>
+          <button type="button" class="lightbox-arrow is-end" id="lightbox-next" aria-label="Next">›</button>
+        </div>
+
+        <div class="lightbox-sidebar">
+          <div>
+            <div id="lb-format" style="font-size:0.75rem;font-weight:800;color:var(--teal);margin-bottom:0.4rem;"></div>
+            <h3 id="lb-title" style="margin:0 0 0.4rem;font-size:1.35rem;font-weight:900;color:var(--teal-ink);"></h3>
+            <div id="lb-meta" style="font-size:0.78rem;font-weight:700;color:var(--ink-soft);padding-bottom:1rem;margin-bottom:1rem;border-bottom:1px solid var(--line);"></div>
+            <p id="lb-brief" style="margin:0 0 1.5rem;font-size:0.9rem;font-weight:600;color:var(--ink);line-height:1.7;"></p>
+          </div>
+
+          <div style="padding-top:1rem;border-top:1px solid var(--line);">
+            <button type="button" id="lb-request-btn" class="btn-teal" style="width:100%;" data-i18n="lbRequestBtn">
+              اطلب عملاً مشابهاً الآن
+            </button>
+            <div style="text-align:center;font-size:0.75rem;font-weight:700;color:var(--ink-soft);margin-top:0.75rem;">
+              @studioadam.co · <span dir="ltr">078 513 1386</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inquiry / Booking Modal -->
+    <div id="inquiry-modal" class="modal-backdrop inquiry-backdrop hidden" role="dialog" aria-modal="true">
+      <div class="inquiry-card" id="inquiry-card">
+        <button type="button" class="modal-close-btn" id="inquiry-close" aria-label="Close">✕</button>
+
+        <div id="inquiry-form-view">
+          <div style="margin-bottom:1.25rem;">
+            <span style="font-size:0.75rem;font-weight:900;letter-spacing:0.06em;color:#124E52;">STUDIO ADAM</span>
+            <h2 style="margin:0.25rem 0 0.25rem;font-size:1.35rem;font-weight:900;color:#124E52;" data-i18n="inqTitle">احجز مكانك في ستوديو آدم</h2>
+            <p style="margin:0;font-size:0.78rem;color:var(--ink-soft);" data-i18n="inqSub">
+              أرسل لنا بيانات محلك وسنتواصل معك فوراً لتجهيز انطلاقتك على السوشيال ميديا.
+            </p>
+          </div>
+
+          <form id="inquiry-form">
+            <div class="form-field">
+              <label class="form-label" for="inq-shop" data-i18n="inqShopLabel">اسم محلك أو مشروعك:</label>
+              <input id="inq-shop" type="text" required class="form-input" placeholder="مثال: متجر ريماس، مقهى أروما" />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="inq-handle" data-i18n="inqHandleLabel">حساب الإنستغرام (إن وجد):</label>
+              <input id="inq-handle" type="text" class="form-input dir-ltr" placeholder="@yourhandle" />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="inq-service" data-i18n="inqServiceLabel">الباقة أو الخدمة المطلوبة:</label>
+              <select id="inq-service" class="form-input"></select>
+              <pre id="inq-brief-preview" class="brief-preview hidden"></pre>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="inq-notes" data-i18n="inqNotesLabel">ملاحظات إضافية عن مجالك:</label>
+              <textarea id="inq-notes" rows="2" class="form-input" placeholder="أخبرنا عن فكرة محلك وموعد الإطلاق المفضل..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-teal" style="width:100%;border-radius:14px;" data-i18n="inqSubmitBtn">
+              إرسال ومتابعة عبر واتساب مباشرة
+            </button>
+          </form>
+        </div>
+
+        <div id="inquiry-success-view" class="hidden" style="text-align:center;padding:2rem 0;">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.5rem;font-weight:900;">✓</div>
+          <h3 style="margin:0 0 0.5rem;font-size:1.25rem;font-weight:900;color:#124E52;" data-i18n="inqSuccessTitle">تم تجهيز بيانات طلبك بنجاح!</h3>
+          <p style="margin:0 0 1.5rem;font-size:0.8rem;color:var(--ink-soft);" data-i18n="inqSuccessDesc">
+            جاري تحويلك إلى محادثة واتساب ستوديو آدم لمتابعة التفاصيل فوراً.
+          </p>
+          <a id="inq-wa-direct" href="https://wa.me/962785131386" target="_blank" rel="noopener noreferrer" class="btn-teal" style="background:var(--wa);" data-i18n="inqWaDirect">
+            فتح المحادثة على واتساب الآن
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
